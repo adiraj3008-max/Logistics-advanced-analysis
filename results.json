@@ -1,0 +1,624 @@
+{
+  "cleaning": {
+    "rows_raw": 5030,
+    "columns": 19,
+    "duplicates_removed": 30,
+    "missing_weight": 60,
+    "missing_rating": 285,
+    "outliers_weight_kg": 376,
+    "outliers_transport_cost_usd": 202,
+    "outliers_delivery_time_hrs": 41,
+    "rows_clean": 5000
+  },
+  "summary": {
+    "0": {
+      "variable": "Shipment weight (kg)",
+      "mean": 343.4929399999999,
+      "median": 219.3,
+      "mode": 104.91666666666667,
+      "std": 409.47673020902295,
+      "min": 5.0,
+      "max": 6000.0,
+      "cv_pct": 119.20964960998121,
+      "skew": 4.261018960580424
+    },
+    "1": {
+      "variable": "Distance (km)",
+      "mean": 1197.4077399999999,
+      "median": 1119.65,
+      "mode": 1053.5750000000003,
+      "std": 688.9989853740436,
+      "min": 40.2,
+      "max": 2472.3,
+      "cv_pct": 57.5408828887346,
+      "skew": -0.05121411356935571
+    },
+    "2": {
+      "variable": "Delivery time (hrs)",
+      "mean": 41.973284,
+      "median": 39.305,
+      "mode": 30.7905,
+      "std": 20.52375161834313,
+      "min": 5.2,
+      "max": 123.31,
+      "cv_pct": 48.897178544197615,
+      "skew": 0.646833525649983
+    },
+    "3": {
+      "variable": "Transport cost (USD)",
+      "mean": 197.739706,
+      "median": 168.60000000000002,
+      "mode": 150.3955,
+      "std": 162.88337163862013,
+      "min": 16.7,
+      "max": 2690.61,
+      "cv_pct": 82.37261748463412,
+      "skew": 4.46765200162282
+    },
+    "4": {
+      "variable": "Cost per kg (USD)",
+      "mean": 1.2467970524711116,
+      "median": 0.6944903767958797,
+      "mode": 0.5420115367086545,
+      "std": 1.706725190906237,
+      "min": 0.05709955967289986,
+      "max": 29.151818181818182,
+      "cv_pct": 136.8887733190869,
+      "skew": 5.053735524922418
+    },
+    "5": {
+      "variable": "Traffic index (1-10)",
+      "mean": 5.764762,
+      "median": 5.75,
+      "mode": 5.65,
+      "std": 1.5330848551827254,
+      "min": 1.0,
+      "max": 10.0,
+      "cv_pct": 26.594070235383967,
+      "skew": -0.005136491918032574
+    },
+    "6": {
+      "variable": "Customer rating (1-5)",
+      "mean": 4.559278897136798,
+      "median": 5.0,
+      "mode": 4.95,
+      "std": 0.551193703694463,
+      "min": 2.0,
+      "max": 5.0,
+      "cv_pct": 12.089493012603587,
+      "skew": -0.7560903707646001
+    }
+  },
+  "overall": {
+    "shipments": 5000,
+    "delay_rate": 0.2456,
+    "mean_time": 41.973284,
+    "mean_cost": 197.739706,
+    "total_cost": 988698.53,
+    "mean_delay_when_late": 4.928762214983713,
+    "mean_rating": 4.559278897136798,
+    "rating_late": 4.348128807658834,
+    "rating_ontime": 4.627313516545149
+  },
+  "by_mode": {
+    "Road": {
+      "shipments": 3698,
+      "mean_time": 36.33557598702001,
+      "median_time": 35.62,
+      "mean_cost": 174.78669821525148,
+      "cost_per_kg": 0.6334634913549315,
+      "delay_rate": 0.27312060573282854,
+      "avg_distance": 1091.8084640346133
+    },
+    "Rail": {
+      "shipments": 928,
+      "mean_time": 70.15309267241379,
+      "median_time": 68.14,
+      "mean_cost": 146.80217672413795,
+      "cost_per_kg": 0.5474475987947891,
+      "delay_rate": 0.1411637931034483,
+      "avg_distance": 1514.924353448276
+    },
+    "Air": {
+      "shipments": 374,
+      "mean_time": 27.795160427807485,
+      "median_time": 26.62,
+      "mean_cost": 551.0826203208557,
+      "cost_per_kg": 2.1118364410139128,
+      "delay_rate": 0.232620320855615,
+      "avg_distance": 1453.693048128342
+    }
+  },
+  "by_carrier": {
+    "BlueLine": {
+      "shipments": 1342,
+      "delay_rate": 0.22652757078986588,
+      "mean_time": 41.94793591654247,
+      "mean_cost": 188.34648286140091,
+      "cost_per_kg": 0.6600143063578261,
+      "rating": 4.572327044025157
+    },
+    "RapidFreight": {
+      "shipments": 947,
+      "delay_rate": 0.11087645195353749,
+      "mean_time": 38.57847940865892,
+      "mean_cost": 236.5607708553326,
+      "cost_per_kg": 0.8026016260162602,
+      "rating": 4.607264472190693
+    },
+    "SwiftMove": {
+      "shipments": 1561,
+      "delay_rate": 0.16655989750160155,
+      "mean_time": 40.61746957078796,
+      "mean_cost": 197.1913068545804,
+      "cost_per_kg": 0.6890657439446366,
+      "rating": 4.58445945945946
+    },
+    "TransGo": {
+      "shipments": 1150,
+      "delay_rate": 0.4860869565217391,
+      "mean_time": 46.63878260869565,
+      "mean_cost": 177.47727826086955,
+      "cost_per_kg": 0.651671969666608,
+      "rating": 4.470425138632162
+    }
+  },
+  "by_hub": {
+    "Delhi": {
+      "shipments": 1206,
+      "delay_rate": 0.23797678275290216,
+      "mean_time": 44.0203399668325,
+      "mean_cost": 209.1566417910448
+    },
+    "Mumbai": {
+      "shipments": 1372,
+      "delay_rate": 0.3520408163265306,
+      "mean_time": 42.65991982507289,
+      "mean_cost": 182.9331559766764
+    },
+    "Bengaluru": {
+      "shipments": 1146,
+      "delay_rate": 0.17539267015706805,
+      "mean_time": 40.42561082024433,
+      "mean_cost": 195.7140139616056
+    },
+    "Kolkata": {
+      "shipments": 683,
+      "delay_rate": 0.16691068814055637,
+      "mean_time": 47.38581259150805,
+      "mean_cost": 228.46260614934113
+    },
+    "Nagpur": {
+      "shipments": 593,
+      "delay_rate": 0.2411467116357504,
+      "mean_time": 32.97844856661046,
+      "mean_cost": 177.3070994940978
+    }
+  },
+  "by_weather": {
+    "Clear": {
+      "shipments": 3537,
+      "delay_rate": 0.13655640373197625,
+      "mean_delay": 0.420251625671473
+    },
+    "Fog": {
+      "shipments": 293,
+      "delay_rate": 0.6279863481228669,
+      "mean_delay": 3.6850511945392492
+    },
+    "Rain": {
+      "shipments": 944,
+      "delay_rate": 0.3834745762711864,
+      "mean_delay": 1.5343220338983052
+    },
+    "Storm": {
+      "shipments": 226,
+      "delay_rate": 0.8805309734513275,
+      "mean_delay": 9.017566371681417
+    }
+  },
+  "by_priority": {
+    "Express": {
+      "shipments": 1220,
+      "delay_rate": 0.26557377049180325,
+      "mean_time": 31.287163934426225,
+      "mean_cost": 306.4328770491803
+    },
+    "Standard": {
+      "shipments": 3780,
+      "delay_rate": 0.23915343915343915,
+      "mean_time": 45.42224338624338,
+      "mean_cost": 162.65884126984128
+    }
+  },
+  "slopes": {
+    "Air": 0.11278468722649172,
+    "Rail": 2.786299723246342,
+    "Road": 1.9933853033988689
+  },
+  "worked_row": {
+    "shipment_id": "SH00458",
+    "order_date": "2025-02-07 00:00:00",
+    "origin_hub": "Mumbai",
+    "destination_region": "South",
+    "lane": "Mumbai \u2192 South",
+    "carrier": "TransGo",
+    "transport_mode": "Road",
+    "priority": "Standard",
+    "weather": "Clear",
+    "weight_kg": 440.6,
+    "distance_km": 1059.2,
+    "traffic_index": 7.21,
+    "fuel_index": 0.988,
+    "delivery_time_hrs": 42.28,
+    "promised_time_hrs": 41.73,
+    "delay_hours": 0.55,
+    "delayed": 1,
+    "transport_cost_usd": 170.96,
+    "customer_rating": 5.0,
+    "month": 2,
+    "is_peak": false,
+    "cost_per_kg": 0.38801634135270086,
+    "cost_per_kg_km": 0.00036632962741002723
+  },
+  "worked_cell": {
+    "n": 305,
+    "late": 189
+  },
+  "corr": {
+    "Distance": {
+      "Distance": 1.0,
+      "Weight": -0.015218798139673235,
+      "Traffic index": -0.028014528059703978,
+      "Fuel index": 0.026591684723352594,
+      "Delivery time": 0.7538267955310152,
+      "Delay hours": -0.13385803548041478,
+      "Transport cost": 0.5239041584699963,
+      "Customer rating": 0.05572590122422183
+    },
+    "Weight": {
+      "Distance": -0.015218798139673235,
+      "Weight": 1.0,
+      "Traffic index": -0.007032202422372906,
+      "Fuel index": -0.005923463974519191,
+      "Delivery time": 0.04091674072441859,
+      "Delay hours": 0.0830577826064755,
+      "Transport cost": 0.2294192043670639,
+      "Customer rating": -0.024733769545378263
+    },
+    "Traffic index": {
+      "Distance": -0.028014528059703978,
+      "Weight": -0.007032202422372906,
+      "Traffic index": 1.0,
+      "Fuel index": 0.25118902579991986,
+      "Delivery time": 0.04803942764146687,
+      "Delay hours": 0.10896337222136197,
+      "Transport cost": -0.01937618257425193,
+      "Customer rating": -0.011329942737626995
+    },
+    "Fuel index": {
+      "Distance": 0.026591684723352594,
+      "Weight": -0.005923463974519191,
+      "Traffic index": 0.25118902579991986,
+      "Fuel index": 1.0,
+      "Delivery time": 0.044864128881525224,
+      "Delay hours": 0.07714177173881058,
+      "Transport cost": 0.04196807192118029,
+      "Customer rating": -0.020657846538072327
+    },
+    "Delivery time": {
+      "Distance": 0.7538267955310152,
+      "Weight": 0.04091674072441859,
+      "Traffic index": 0.04803942764146687,
+      "Fuel index": 0.044864128881525224,
+      "Delivery time": 1.0,
+      "Delay hours": 0.12318030717353808,
+      "Transport cost": 0.14692583473904913,
+      "Customer rating": -0.02230969463557224
+    },
+    "Delay hours": {
+      "Distance": -0.13385803548041478,
+      "Weight": 0.0830577826064755,
+      "Traffic index": 0.10896337222136197,
+      "Fuel index": 0.07714177173881058,
+      "Delivery time": 0.12318030717353808,
+      "Delay hours": 1.0,
+      "Transport cost": -0.03812048891872729,
+      "Customer rating": -0.3149067542797586
+    },
+    "Transport cost": {
+      "Distance": 0.5239041584699963,
+      "Weight": 0.2294192043670639,
+      "Traffic index": -0.01937618257425193,
+      "Fuel index": 0.04196807192118029,
+      "Delivery time": 0.14692583473904913,
+      "Delay hours": -0.03812048891872729,
+      "Transport cost": 1.0,
+      "Customer rating": 0.023252149916959584
+    },
+    "Customer rating": {
+      "Distance": 0.05572590122422183,
+      "Weight": -0.024733769545378263,
+      "Traffic index": -0.011329942737626995,
+      "Fuel index": -0.020657846538072327,
+      "Delivery time": -0.02230969463557224,
+      "Delay hours": -0.3149067542797586,
+      "Transport cost": 0.023252149916959584,
+      "Customer rating": 1.0
+    }
+  },
+  "monthly": {
+    "1": {
+      "shipments": 369,
+      "avg_cost": 198.78520325203255,
+      "delay_rate": 0.15176151761517614
+    },
+    "2": {
+      "shipments": 363,
+      "avg_cost": 186.0975482093664,
+      "delay_rate": 0.15151515151515152
+    },
+    "3": {
+      "shipments": 417,
+      "avg_cost": 194.24741007194245,
+      "delay_rate": 0.1510791366906475
+    },
+    "4": {
+      "shipments": 392,
+      "avg_cost": 184.92650510204084,
+      "delay_rate": 0.1760204081632653
+    },
+    "5": {
+      "shipments": 364,
+      "avg_cost": 195.01296703296703,
+      "delay_rate": 0.14835164835164835
+    },
+    "6": {
+      "shipments": 346,
+      "avg_cost": 195.06115606936416,
+      "delay_rate": 0.2861271676300578
+    },
+    "7": {
+      "shipments": 375,
+      "avg_cost": 207.63349333333332,
+      "delay_rate": 0.27466666666666667
+    },
+    "8": {
+      "shipments": 397,
+      "avg_cost": 187.05692695214108,
+      "delay_rate": 0.25692695214105793
+    },
+    "9": {
+      "shipments": 410,
+      "avg_cost": 187.9671463414634,
+      "delay_rate": 0.3073170731707317
+    },
+    "10": {
+      "shipments": 482,
+      "avg_cost": 195.24495850622404,
+      "delay_rate": 0.3153526970954357
+    },
+    "11": {
+      "shipments": 553,
+      "avg_cost": 216.74470162748645,
+      "delay_rate": 0.29294755877034356
+    },
+    "12": {
+      "shipments": 532,
+      "avg_cost": 211.77924812030074,
+      "delay_rate": 0.35150375939849626
+    }
+  },
+  "hub_carrier": {
+    "Delhi": {
+      "RapidFreight": 7.916666666666666,
+      "SwiftMove": 18.529411764705884,
+      "BlueLine": 19.879518072289155,
+      "TransGo": 47.27891156462585
+    },
+    "Mumbai": {
+      "RapidFreight": 18.867924528301888,
+      "SwiftMove": 25.116279069767444,
+      "BlueLine": 36.55913978494624,
+      "TransGo": 61.967213114754095
+    },
+    "Bengaluru": {
+      "RapidFreight": 4.225352112676056,
+      "SwiftMove": 10.077519379844961,
+      "BlueLine": 14.432989690721648,
+      "TransGo": 43.529411764705884
+    },
+    "Kolkata": {
+      "RapidFreight": 13.709677419354838,
+      "SwiftMove": 8.837209302325581,
+      "BlueLine": 13.756613756613756,
+      "TransGo": 33.5483870967742
+    },
+    "Nagpur": {
+      "RapidFreight": 9.523809523809524,
+      "SwiftMove": 16.402116402116402,
+      "BlueLine": 21.518987341772153,
+      "TransGo": 48.226950354609926
+    }
+  },
+  "weather_priority": {
+    "0": {
+      "weather": "Clear",
+      "priority": "Express",
+      "delayed": 14.154200230149597
+    },
+    "1": {
+      "weather": "Clear",
+      "priority": "Standard",
+      "delayed": 13.493253373313344
+    },
+    "2": {
+      "weather": "Fog",
+      "priority": "Express",
+      "delayed": 65.4320987654321
+    },
+    "3": {
+      "weather": "Fog",
+      "priority": "Standard",
+      "delayed": 61.79245283018868
+    },
+    "4": {
+      "weather": "Rain",
+      "priority": "Express",
+      "delayed": 45.83333333333333
+    },
+    "5": {
+      "weather": "Rain",
+      "priority": "Standard",
+      "delayed": 36.12637362637363
+    },
+    "6": {
+      "weather": "Storm",
+      "priority": "Express",
+      "delayed": 90.74074074074075
+    },
+    "7": {
+      "weather": "Storm",
+      "priority": "Standard",
+      "delayed": 87.20930232558139
+    }
+  },
+  "cost_beta": {
+    "Distance (km)": 0.5132035799337509,
+    "Weight (kg)": 0.2568026437430855,
+    "Mode: Air": 0.499430043278938,
+    "Mode: Rail": -0.17584678977006965,
+    "Express priority": 0.08871414722646398,
+    "Fuel index": 0.021684237303518764,
+    "Storm day": 0.02891690021022187,
+    "Carrier: RapidFreight": 0.10202410776229437
+  },
+  "cost_r2": 0.7091439774295567,
+  "time_beta": {
+    "Distance (km)": 0.6795740402391147,
+    "Weight (kg)": 0.03912940735988595,
+    "Mode: Air": -0.20055168633868325,
+    "Mode: Rail": 0.4798033544183321,
+    "Traffic index": 0.053228569766969415,
+    "Weather: Storm": 0.1615369646893157,
+    "Weather: Rain": 0.08766780859830119,
+    "Weather: Fog": 0.0800643427007183,
+    "Carrier: TransGo": 0.10777941661114236,
+    "Carrier: RapidFreight": -0.04541964694711482,
+    "Hub: Mumbai": 0.08990669098382834,
+    "Peak season": 0.032759307517651985
+  },
+  "time_r2": 0.9247900611919779,
+  "pareto": {
+    "top10": {
+      "Mumbai \u2192 West": 1121.96,
+      "Mumbai \u2192 South": 486.49,
+      "Delhi \u2192 North": 473.2,
+      "Bengaluru \u2192 South": 394.28,
+      "Mumbai \u2192 North": 386.71,
+      "Mumbai \u2192 East": 331.43,
+      "Mumbai \u2192 Central": 329.12,
+      "Delhi \u2192 West": 301.32,
+      "Delhi \u2192 East": 234.49,
+      "Delhi \u2192 South": 200.66
+    },
+    "cum10": {
+      "Mumbai \u2192 West": 18.537072161678115,
+      "Mumbai \u2192 South": 26.574881206505722,
+      "Delhi \u2192 North": 34.39311229041788,
+      "Bengaluru \u2192 South": 40.90742368468011,
+      "Mumbai \u2192 North": 47.296663208052195,
+      "Mumbai \u2192 East": 52.772564155095736,
+      "Mumbai \u2192 Central": 58.21029918116752,
+      "Delhi \u2192 West": 63.18872139208133,
+      "Delhi \u2192 East": 67.06297542180778,
+      "Delhi \u2192 South": 70.37828871280063
+    },
+    "lanes_for_80pct": 14,
+    "n_lanes": 25
+  },
+  "tests": {
+    "chi_carrier": [
+      507.0027339138576,
+      1.4489535384168834e-109,
+      3.0
+    ],
+    "chi_weather": [
+      1046.8060310248047,
+      1.262542492896008e-226,
+      3.0
+    ],
+    "chi_peak": [
+      67.08870069601801,
+      2.5956183446564247e-16,
+      1.0
+    ],
+    "kruskal_cpk": [
+      559.1221083234959,
+      3.874153485267547e-122
+    ],
+    "spearman_dist_time": [
+      0.7699944404718408,
+      0.0
+    ],
+    "pearson_dist_cost": [
+      0.5239041584699935,
+      0.0
+    ],
+    "mwu_rating": [
+      1559959.5,
+      1.7559798245747403e-45
+    ],
+    "normal_time": [
+      294.851951374692,
+      9.412657793799345e-65
+    ],
+    "normal_logw": [
+      0.20504733385099946,
+      0.9025567887558732
+    ]
+  },
+  "scenarios": {
+    "carrier": {
+      "worst": "TransGo",
+      "rate_worst": 0.4860869565217391,
+      "rate_others": 0.17376623376623376,
+      "shipments": 1150,
+      "avoided": 359.16883116883116,
+      "share_of_all": 0.2924827615381361
+    },
+    "weather": {
+      "risky_shipments": 519,
+      "delays_before": 383,
+      "avoided": 289,
+      "share_of_all": 0.23534201954397393
+    },
+    "mode_shift": {
+      "road_ckk": 0.00043635409286565783,
+      "rail_ckk": 0.0002603867427203012,
+      "eligible": 1966,
+      "saving": 51227.279651461686,
+      "saving_pct": 0.05181284091871936,
+      "road_time": 44.644999999999996,
+      "rail_time": 68.44
+    },
+    "mumbai": {
+      "peak_rate": 0.6004672897196262,
+      "off_rate": 0.23940677966101695,
+      "peak_shipments": 428
+    }
+  },
+  "hub_delay_share": {
+    "Bengaluru": 0.15241915764012343,
+    "Delhi": 0.22148956137278353,
+    "Kolkata": 0.08896624876910775,
+    "Mumbai": 0.4387775670299313,
+    "Nagpur": 0.0983474651880539
+  },
+  "peak": {
+    "peak_delay": 0.31971920867900444,
+    "off_delay": 0.21176813282842993,
+    "peak_cost": 208.44572431397572,
+    "off_cost": 192.85292164287793
+  }
+}
